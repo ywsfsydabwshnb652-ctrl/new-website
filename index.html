@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>حرب أكتوبر 1973 | العبور العظيم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="progress"></div>
+
+  <nav id="navbar">
+    <a href="#home" class="logo">★ نصر أكتوبر</a>
+    <ul id="menu">
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#background">الخلفية</a></li>
+      <li><a href="#timeline">الأحداث</a></li>
+      <li><a href="#map">الخريطة</a></li>
+      <li><a href="#leaders">القادة</a></li>
+      <li><a href="#gallery">الصور</a></li>
+      <li><a href="#videos">الفيديوهات</a></li>
+      <li><a href="#results">النتائج</a></li>
+      <li><a href="#quiz">اختبار</a></li>
+    </ul>
+    <div class="nav-tools">
+      <button id="themeBtn" title="تغيير الوضع">🌓</button>
+      <button id="burger" title="القائمة">☰</button>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="tag">6 أكتوبر 1973 — 10 رمضان 1393 هـ</p>
+      <h1>حرب أكتوبر <span>المجيدة</span></h1>
+      <p class="sub">يوم عبر المصريون قناة السويس وحطموا أسطورة خط بارليف</p>
+      <div class="since">
+        <div class="box"><span id="sYears">0</span><small>سنة</small></div>
+        <div class="box"><span id="sDays">0</span><small>يوم</small></div>
+        <div class="box"><span id="sHours">0</span><small>ساعة</small></div>
+        <div class="box"><span id="sMins">0</span><small>دقيقة</small></div>
+        <div class="box"><span id="sSecs">0</span><small>ثانية</small></div>
+      </div>
+      <p class="since-text">مرّت على الانتصار <b id="yearsText"></b> عامًا</p>
+      <div class="hero-btns">
+        <a href="#timeline" class="btn">اعرف إيه اللي حصل</a>
+        <a href="#gallery" class="btn ghost">شوف الصور</a>
+      </div>
+    </div>
+    <a href="#stats" class="scroll-down">⌄</a>
+  </header>
+
+  <section id="stats" class="stats">
+    <div class="stat"><h3 class="count" data-to="1973">0</h3><p>عام الحرب</p></div>
+    <div class="stat"><h3 class="count" data-to="200">0</h3><p>طائرة في الضربة الجوية الأولى</p></div>
+    <div class="stat"><h3 class="count" data-to="170">0</h3><p>كم طول خط بارليف تقريبًا</p></div>
+    <div class="stat"><h3 class="count" data-to="19">0</h3><p>يوم مدة القتال (6–24 أكتوبر)</p></div>
+  </section>
+
+  <section id="background" class="section reveal">
+    <div class="head"><small>01</small><h2>الخلفية</h2><p>الطريق إلى العبور</p></div>
+    <div class="cards">
+      <article class="card"><div class="ico"></div><h3>نكسة 1967</h3>
+        <p>احتلت إسرائيل سيناء بالكامل وقطاع غزة والجولان والضفة الغربية، وأُغلقت قناة السويس.</p></article>
+      <article class="card"><div class="ico"></div><h3>حرب الاستنزاف</h3>
+        <p>من 1967 إلى 1970 استمرت العمليات على الجبهة، وأعاد الجيش المصري بناء نفسه وتدريبه.</p></article>
+      <article class="card"><div class="ico"></div><h3>قرار الحرب</h3>
+        <p>بعد فشل الجهود السياسية قرر الرئيس أنور السادات الحرب بالتنسيق مع سوريا، لاسترداد الأرض.</p></article>
+      <article class="card"><div class="ico"></div><h3>خط بارليف</h3>
+        <p>ساتر ترابي ضخم وتحصينات على الضفة الشرقية للقناة، اعتبرته إسرائيل حاجزًا لا يُخترق.</p></article>
+    </div>
+  </section>
+
+  <section id="timeline" class="section reveal alt">
+    <div class="head"><small>02</small><h2>الأحداث بالتفصيل</h2><p>يومًا بيوم</p></div>
+    <div class="tabs" id="tabs"></div>
+    <div class="tab-content" id="tabContent"></div>
+  </section>
+
+  <section id="map" class="section reveal">
+    <div class="head"><small>03</small><h2>خريطة المعارك</h2><p>اضغط على أي نقطة لتعرف إيه اللي حصل فيها</p></div>
+    <div class="map-wrap">
+      <div class="map-box">
+        <div class="map-tools">
+          <button id="zoomIn" title="تكبير">+</button>
+          <button id="zoomOut" title="تصغير">−</button>
+          <button id="zoomReset" title="الوضع الأصلي">⟲</button>
+        </div>
+        <svg id="warMap" viewBox="0 0 600 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="خريطة سيناء وقناة السويس">
+          <defs>
+            <linearGradient id="gSea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" style="stop-color:var(--sea1)"/><stop offset="1" style="stop-color:var(--sea2)"/>
+            </linearGradient>
+            <linearGradient id="gWest" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" style="stop-color:var(--west1)"/><stop offset="1" style="stop-color:var(--west2)"/>
+            </linearGradient>
+            <linearGradient id="gSinai" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" style="stop-color:var(--sinai1)"/><stop offset="1" style="stop-color:var(--sinai2)"/>
+            </linearGradient>
+            <linearGradient id="gEast" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" style="stop-color:var(--east1)"/><stop offset="1" style="stop-color:var(--east2)"/>
+            </linearGradient>
+            <linearGradient id="gCanal" gradientUnits="userSpaceOnUse" x1="0" y1="86" x2="0" y2="470">
+              <stop offset="0" stop-color="#7fdcff"/><stop offset="1" stop-color="#2aa8e8"/>
+            </linearGradient>
+            <pattern id="waves" width="24" height="12" patternUnits="userSpaceOnUse">
+              <path d="M0 6 Q6 0 12 6 T24 6" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1.2"/>
+            </pattern>
+            <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+              <path d="M50 0H0V50" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+            </pattern>
+            <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+              <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity=".45"/>
+            </filter>
+          </defs>
+
+          <!-- البحر -->
+          <rect width="600" height="760" fill="url(#gSea)"/>
+          <rect width="600" height="760" fill="url(#waves)"/>
+
+          <!-- اليابسة -->
+          <path d="M0 84 C50 80 110 90 168 86 L166 470 L172 474 C205 545 240 650 270 760 H0 Z" fill="url(#gWest)" class="coast"/>
+          <path d="M566 134 L600 130 V470 H522 L536 300 Z" fill="url(#gEast)" class="coast"/>
+          <path d="M522 470 H600 V760 H462 C466 700 486 650 506 600 C522 560 530 510 522 470 Z" fill="url(#gEast)" class="coast"/>
+          <path d="M178 88 C250 98 340 92 420 104 C490 114 535 122 566 134 L536 300 L522 470 L470 560 L400 700 L384 688 C330 622 250 540 184 474 L178 470 Z"
+                fill="url(#gSinai)" class="coast" filter="url(#shadow)"/>
+
+          <!-- جبال جنوب سيناء -->
+          <g class="mnt">
+            <path d="M318 548 l12 -22 l12 22z"/><path d="M348 566 l12 -22 l12 22z"/>
+            <path d="M380 546 l12 -22 l12 22z"/><path d="M340 596 l12 -22 l12 22z"/>
+            <path d="M376 606 l12 -22 l12 22z"/><path d="M402 578 l12 -22 l12 22z"/>
+            <path d="M366 640 l12 -22 l12 22z"/><path d="M394 650 l12 -22 l12 22z"/>
+          </g>
+
+          <rect width="600" height="760" fill="url(#grid)"/>
+
+          <!-- القناة والبحيرات -->
+          <path d="M170 86 V470" stroke="#0b2f55" stroke-width="14" stroke-linecap="round" opacity=".55"/>
+          <path d="M170 86 V470" stroke="url(#gCanal)" stroke-width="8" stroke-linecap="round"/>
+          <ellipse cx="170" cy="215" rx="14" ry="12" fill="url(#gCanal)" stroke="#0b2f55" stroke-opacity=".5"/>
+          <ellipse cx="170" cy="325" rx="15" ry="42" fill="url(#gCanal)" stroke="#0b2f55" stroke-opacity=".5"/>
+
+          <!-- خط بارليف -->
+          <path d="M186 100 V455" class="barlev"/>
+
+          <!-- أسماء -->
+          <text x="350" y="50" class="sea-txt big" text-anchor="middle">البحر المتوسط</text>
+          <text x="290" y="640" class="sea-txt" text-anchor="middle" transform="rotate(70 290 640)">خليج السويس</text>
+          <text x="445" y="690" class="sea-txt" text-anchor="middle" transform="rotate(-68 445 690)">خليج العقبة</text>
+          <text x="345" y="745" class="sea-txt" text-anchor="middle">البحر الأحمر</text>
+          <text x="370" y="270" class="area-txt" text-anchor="middle">شبه جزيرة سيناء</text>
+          <text x="75" y="300" class="area-txt" text-anchor="middle">مصر</text>
+          <text x="153" y="405" class="canal-txt" text-anchor="middle" transform="rotate(-90 153 405)">قناة السويس</text>
+          <circle cx="170" cy="86" r="4" fill="#fff"/>
+          <text x="160" y="76" class="city-txt" text-anchor="end">بورسعيد</text>
+          <text x="395" y="722" class="city-txt" text-anchor="start">رأس محمد</text>
+
+          <!-- بوصلة -->
+          <g transform="translate(52 150)">
+            <circle r="26" fill="rgba(0,0,0,.35)" stroke="rgba(255,255,255,.6)" stroke-width="1.5"/>
+            <path d="M0 -20 L6 4 L0 0 L-6 4 Z" fill="#e74c5a"/>
+            <path d="M0 20 L6 -4 L0 0 L-6 -4 Z" fill="#fff" opacity=".85"/>
+            <text y="-30" class="city-txt" text-anchor="middle">ش</text>
+          </g>
+
+          <g id="pins"></g>
+        </svg>
+      </div>
+
+      <aside class="map-info" id="mapInfo">
+        <h3>اختر نقطة من الخريطة</h3>
+        <p>اضغط على أي علامة لعرض التفاصيل، أو استخدم أزرار التكبير في أعلى الخريطة.</p>
+        <div class="legend">
+          <span><i class="lg lg-canal"></i> قناة السويس</span>
+          <span><i class="lg lg-barlev"></i> خط بارليف</span>
+          <span><i class="lg lg-pin"></i> موقع حدث</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="leaders" class="section reveal alt">
+    <div class="head"><small>04</small><h2>قادة الحرب</h2><p>رجال صنعوا النصر</p></div>
+    <div class="cards" id="leadersBox"></div>
+  </section>
+
+  <section id="gallery" class="section reveal">
+    <div class="head"><small>05</small><h2>معرض الصور</h2><p>لقطات من أرض المعركة</p></div>
+    <div class="grid" id="galleryGrid"></div>
+  </section>
+
+  <section id="videos" class="section reveal alt">
+    <div class="head"><small>06</small><h2>الفيديوهات</h2><p>شاهد التاريخ</p></div>
+    <div class="grid videos" id="videoGrid"></div>
+  </section>
+
+  <section id="results" class="section reveal">
+    <div class="head"><small>07</small><h2>النتائج وتحرير سيناء</h2><p>ثمرة النصر</p></div>
+    <ul class="results" id="resultsList"></ul>
+  </section>
+
+  <section id="quiz" class="section reveal alt">
+    <div class="head"><small>08</small><h2>اختبر معلوماتك</h2><p>هل تعرف حرب أكتوبر؟</p></div>
+    <div class="quiz" id="quizBox"></div>
+  </section>
+
+  <footer>
+    <div class="flag"><i></i><i></i><i></i></div>
+    <p>تحية لشهداء وأبطال القوات المسلحة المصرية ★ تحيا مصر</p>
+  </footer>
+
+  <div id="lightbox" class="modal">
+    <button class="close" id="lbClose">✕</button>
+    <button class="nav prev" id="lbPrev">❯</button>
+    <figure>
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="nav next" id="lbNext">❮</button>
+  </div>
+
+  <div id="videoModal" class="modal">
+    <button class="close" id="vmClose">✕</button>
+    <div id="vmBody" class="vm-body"></div>
+  </div>
+
+  <button id="toTop" title="لأعلى">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
